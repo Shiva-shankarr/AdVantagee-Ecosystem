@@ -394,3 +394,151 @@
   background-color: rgb(220, 220, 220); /* Subtle gray on hover */
   color: rgb(0, 0, 0); /* Darker text color for hover */
 }
+
+
+
+/* Existing styles remain the same until the media queries */
+
+/* Responsive Design Updates */
+@media screen and (max-width: 1024px) {
+  .whyadveco-highlighted-text {
+    font-size: 48px;
+  }
+
+  .whyadveco-framer-text {
+    font-size: 42px !important;
+  }
+
+  .whyadveco-framer-subtext {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .whyadveco-header-section,
+  .whyadveco-header-section0 {
+    height: auto !important;
+    min-height: 70vh;
+    padding: 40px 0;
+  }
+
+  .whyadveco-highlighted-text {
+    font-size: 36px;
+  }
+
+  .whyadveco-framer-text {
+    font-size: 32px !important;
+    letter-spacing: -1px;
+  }
+
+  .whyadveco-framer-text:first-child {
+    font-size: 28px;
+  }
+
+  .whyadveco-text-content {
+    padding: 0 15px;
+  }
+
+  .whyadveco-text-content h1 {
+    font-size: 24px;
+    max-width: 95%;
+  }
+
+  .whyadveco-framer-container {
+    padding: 10px !important;
+  }
+
+  .whyadveco-framer-section {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+
+  .whyadveco-content {
+    padding: 15px !important;
+  }
+
+  .whyadveco-bookmark {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .whyadveco-bookmark img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whyadveco-bookmark h3 {
+    font-size: 16px;
+    margin: 10px 0 5px 0;
+  }
+
+  .whyadveco-bookmark p {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .whyadveco-header-section,
+  .whyadveco-header-section0 {
+    min-height: 60vh;
+    padding: 30px 0;
+  }
+
+  .whyadveco-highlighted-text {
+    font-size: 28px;
+  }
+
+  .whyadveco-framer-text {
+    font-size: 24px !important;
+  }
+
+  .whyadveco-framer-subtext {
+    font-size: 14px;
+    line-height: 1.4em;
+  }
+
+  .whyadveco-text-content h1 {
+    font-size: 20px;
+  }
+
+  .whyadveco-heading-text {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .whyadveco-pivot-container {
+    padding: 40px 20px;
+  }
+
+  .whyadveco-btn-white {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+  .whyadveco-btn-white:hover {
+    background-color: #ffffff !important;
+    color: rgb(17, 17, 17);
+  }
+
+  .whyadveco-bookmark {
+    cursor: default;
+  }
+}
+
+/* Landscape Mode Optimization */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+  .whyadveco-header-section,
+  .whyadveco-header-section0 {
+    height: auto !important;
+    min-height: 100vh;
+  }
+
+  .whyadveco-text-content {
+    padding: 60px 15px;
+  }
+}
