@@ -68,14 +68,16 @@ const Home = () => {
           </h4>
 
           {/* Hero Buttons */}
-          <div className="hero-buttons">
-            <a href="/products-tools" className="hero-btn explore-btn">
-              Explore Adveco
-            </a>
-            <a href="/whyadveco" className="hero-btn learn-btn">
-              Learn More
-            </a>
-          </div>
+          {/* Hero Buttons */}
+{/* Hero Buttons */}
+<div className="hero-buttons">
+    <a href="/products-tools" className="hero-btn explore-btn">
+        Explore Adveco
+    </a>
+    <a href="/whyadveco" className="hero-btn learn-btn">
+        Learn More
+    </a>
+</div>
         </div>
       </section>
 
