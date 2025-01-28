@@ -1,0 +1,396 @@
+/* Header container */
+/* Header container */
+.whyadveco-header-section {
+  position: relative;
+  width: 100%;
+  height: 90vh !important; /* Increase the height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-bottom: 5px;
+}
+
+.whyadveco-header-section0 {
+  position: relative;
+  width: 100%;
+  height: vh !important; /* Increase the height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Background image wrapper */
+.whyadveco-background-image-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+
+
+/* Background image */
+.whyadveco-background-image0 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.5);
+  border-radius: inherit;
+}
+
+/* Text content */
+.whyadveco-text-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* Heading styles */
+.whyadveco-framer-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.whyadveco-framer-text:first-child {
+  font-size: 32px;
+}
+
+.whyadveco-highlighted-text {
+  font-size: 64px;
+  font-weight: 600;
+}
+
+/* Subtext */
+.whyadveco-framer-subtext {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6em;
+  opacity: 0.7;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Content Wrapper */
+.whyadveco-content-wrapper {
+  z-index: 2;
+  padding: 20px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Content Section */
+.whyadveco-content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.whyadveco-section-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.whyadveco-section-title {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #001122;
+  margin-bottom: 10px;
+}
+
+.whyadveco-section-text {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  line-height: 1.6em;
+}
+
+/* Container styling */
+.whyadveco-framer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding-left: 20px !important; /* Left padding */
+  padding-right: 20px !important; /* Right padding */
+  background-color: #fff;
+}
+
+/* Section styling */
+.whyadveco-framer-section {
+  flex: 1 1 calc(33.33% - 20px); /* Flex properties */
+  min-width: 280px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+/* Section heading styling */
+.whyadveco-framer-section h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.7px;
+  line-height: 1.2em;
+  text-align: left;
+  color: #001122;
+}
+
+/* Section paragraph styling */
+.whyadveco-framer-section p {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  line-height: 1.6em;
+  text-align: left;
+  color: #666;
+}
+
+/* Optional: Increase the width of the section on smaller screens */
+@media (max-width: 768px) {
+  .whyadveco-framer-section {
+    flex: 1 1 calc(50% - 20px); /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .whyadveco-framer-section {
+    flex: 1 1 100%; /* Full width for very small screens */
+  }
+}
+
+/* CSS for fade-in and fade-out */
+.whyadveco-fade-in {
+  animation: whyadveco-fadeIn 1s ease-in-out forwards;
+}
+
+.whyadveco-fade-out {
+  animation: whyadveco-fadeOut 1s ease-in-out forwards;
+}
+
+@keyframes whyadveco-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes whyadveco-fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Buttons */
+.whyadveco-talk-button {
+  background-color: #173ca2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.whyadveco-talk-button:hover {
+  background-color: #4be05c;
+}
+
+/* Section container */
+.whyadveco-header-section {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background image container */
+.whyadveco-background-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background image */
+.whyadveco-background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.9);
+  border-radius: inherit;
+}
+
+/* Text content */
+.whyadveco-text-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Main heading */
+.whyadveco-text-content h1 {
+  font-size: 30px;
+  font-weight: 350;
+  line-height: 1.3;
+  max-width: 80%; /* Optional: to prevent text from stretching full width */
+}
+
+/* Highlighted text styling */
+.whyadveco-highlighted-text {
+  font-size: 55px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Overlay */
+.whyadveco-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Replicating the exact text gradient styling */
+.whyadveco-framer-text[data-text-fill] {
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: max(0em, calc(calc(2em - var(--framer-blockquote-line-height, var(--framer-line-height, 1.9em))) / 2));
+  margin: min(0em, calc(calc(1.3em - var(--framer-blockquote-line-height, var(--framer-line-height, 1.3em))) / -2));
+}
+
+/* Text rendering enhancements */
+.whyadveco-framer-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 700 !important;
+  font-size: 52px !important;
+  letter-spacing: -1px;
+  line-height: 1.5em;
+}
+
+/* Apply smoothing for consistent text rendering */
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: inherit;
+}
+
+/* Gradient-specific adjustments */
+[data-text-fill] {
+  display: inline;
+  text-transform: none;
+}
+
+/* Pivot Container Styles */
+.whyadveco-pivot-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7bafd1;
+  padding: 63px 40px;
+  width: 100%;
+  height: min-content;
+}
+
+/* Wrapper */
+.whyadveco-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Heading Container */
+.whyadveco-heading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+}
+
+/* Heading Text */
+.whyadveco-heading-text {
+  font-family: "Inter", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: -2.1px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+/* Button Container */
+.whyadveco-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+.whyadveco-btn-white {
+  background-color: #ffffff !important; /* Ensures the background is pure white */
+  color: rgb(17, 17, 17); /* Text color to contrast with white */
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  border: 2px solid #ffffff; /* Optional: Add a border to define the button */
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Button Hover Effect */
+.whyadveco-btn-white:hover {
+  background-color: rgb(220, 220, 220); /* Subtle gray on hover */
+  color: rgb(0, 0, 0); /* Darker text color for hover */
+}

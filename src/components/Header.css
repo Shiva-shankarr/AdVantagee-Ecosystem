@@ -1,0 +1,272 @@
+/* Prevent horizontal overflow on both html and body */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+}
+
+/* Navbar background color */
+.navbar, .navbar-collapse {
+    background-color: white !important; /* White background */
+}
+
+
+
+/* Navigation Link Styles */
+.nav-link-custom {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    color: #121212 !important; /* Consistent dark color for links */
+    position: relative;
+}
+
+/* Remove active state coloring */
+.nav-link-custom.active {
+    color: #121212; /* Keep the same dark color for active links */
+    font-weight: 500; /* No bold styling for active links */
+}
+
+/* Hover effect for Nav Links */
+.nav-link-custom:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Slight background on hover */
+    color: #000; /* Slightly darker color on hover */
+    border-radius: 4px;
+}
+
+/* Search Input Custom Styles */
+input[type="search"] {
+    font-size: 0.95rem;
+    color: #000;
+    background-color: #f8f9fa; /* Light background */
+    border: 1px solid #6c757d;
+    border-radius: 50px;
+}
+
+input[type="search"]::placeholder {
+    color: #6c757d;
+}
+
+/* Search Button Custom Styles */
+button[type="submit"] {
+    background-color: transparent;
+    border: none;
+}
+
+/* Navbar Brand Styling */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #343a40; /* Dark color */
+    text-decoration: none;
+}
+
+/* Shadow Effect on Scroll */
+.sticky-top.shadow-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Adjust Navbar style */
+.navbar {
+    background-color: #ffffff; /* White background */
+}
+
+/* Mobile Navbar Styling */
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        justify-content: center;
+    }
+}
+
+.nav-link-custom {
+    font-size: 1rem;
+    color: #121212; /* Consistent dark color for links */
+    transition: color 0.3s ease;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-modal {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 16px;
+    padding: 20px;
+    z-index: 1050;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-input {
+    border-radius: 16px;
+    padding-right: 40px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-bar-container {
+    max-width: 400px;
+    margin-left: auto;
+  }
+  
+  @media (max-width: 576px) {
+    .search-bar-container {
+      max-width: 300px;
+    }
+  }
+  
+  .cccc{
+    background-color: #000 !important;
+  }
+
+
+
+  
+
+  /* Existing styles remain unchanged */
+
+/* Existing styles remain */
+
+/* Fix for search bar visibility on mobile */
+@media (max-width: 768px) {
+    /* Ensure both columns take appropriate space */
+    .col-xs-12.col-md-6 {
+      flex: 1 !important;
+      max-width: none !important;
+      width: auto !important;
+      display: flex !important;
+    }
+  
+    /* Prevent columns from stacking */
+    .row.align-items-center {
+      flex-wrap: nowrap !important;
+      width: 100% !important;
+    }
+  
+    /* Keep search form visible */
+    .d-flex {
+      display: flex !important;
+    }
+  
+    /* Adjust brand width */
+    .navbar-brand {
+      font-size: 0.9rem !important;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  
+    /* Search form container adjustments */
+    form.d-flex {
+      width: auto !important;
+      min-width: 40px !important;
+      display: flex !important;
+      margin-left: auto;
+    }
+  
+    /* Position relative container for search */
+    .position-relative {
+      width: auto !important;
+      min-width: 32px !important;
+      display: flex !important;
+    }
+  
+    /* Search button adjustments */
+    .search-button {
+      padding: 4px !important;
+      display: flex !important;
+      width: auto !important;
+    }
+  
+    /* Container adjustments */
+    .container-fluid {
+      width: 100% !important;
+      padding-right: 10px !important;
+      padding-left: 10px !important;
+    }
+  
+    /* Force display of all necessary elements */
+    .d-flex.justify-content-end {
+      display: flex !important;
+      justify-content: flex-end !important;
+    }
+  }
+  
+  /* Additional fixes for very small screens */
+  @media (max-width: 576px) {
+    .navbar-brand span {
+      display: inline-block !important;
+    }
+  
+    .col-xs-12.col-md-6:first-child {
+      flex: 0 1 auto !important;
+    }
+  
+    .col-xs-12.col-md-6:last-child {
+      flex: 0 0 auto !important;
+    }
+  }
+  
+  /* Ensure search button remains visible */
+  .search-button {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  /* Force display flex utilities */
+  .d-flex {
+    display: flex !important;
+  }
+
+
+  
+
+  /* Add these new styles while keeping all existing ones */
+.flex-nowrap {
+    flex-wrap: nowrap !important;
+  }
+  
+  @media (max-width: 768px) {
+    .ms-auto {
+      margin-left: auto !important;
+    }
+    
+    .position-relative.d-flex {
+      width: auto !important;
+      min-width: 32px !important;
+    }
+  
+    .search-button {
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  
+    input[type="text"] {
+      width: 150px !important;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .navbar-brand span {
+      font-size: 0.9rem;
+    }
+  
+    input[type="text"] {
+      width: 120px !important;
+    }
+  }

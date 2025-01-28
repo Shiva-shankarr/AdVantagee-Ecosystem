@@ -1,0 +1,122 @@
+.about-us-section {
+    padding: 50px 0;
+}
+
+.about-us-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-us-section p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.about-us-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    border-radius: 50%;
+}
+
+.contact-container {
+    background-color: #f4f7f8;
+    padding: 50px 0;
+}
+
+.contact-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkedin-link {
+  text-decoration: none;
+  color: #0a66c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Add some space above the icon */
+}
+
+
+.linkedin-link:hover {
+    color: #004182;
+}
+
+
+.contact {
+    padding: 60px 20px; /* Increased padding for more space */
+  }
+  
+  .text-container .title {
+    font-size: 3rem; /* Increased font size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px; /* Increased margin for better spacing */
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Remove background container and ensure full height and width for the form */
+/* Ensure the container takes up full viewport height and width */
+.iframe-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%;
+    height: 50vh; /* Full viewport height */
+    margin: 0;
+    padding: 50px;
+  }
+  
+  .typeform-widget {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove the iframe border */
+  }
+  
+  @media (max-width: 768px) {
+    .iframe-container {
+      padding: 20px; /* Adjust padding on smaller screens */
+    }
+  
+    .iframe {
+      height: 100%;
+    }
+  }
+  

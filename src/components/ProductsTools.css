@@ -1,0 +1,413 @@
+/* styles.css */
+
+.bbbb {
+  
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  padding: 0px;           /* Adds space around the content */
+  text-align: center;      /* Ensures the text inside is centered */
+}
+
+
+
+/* Enhanced base styles */
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6 !important;
+  color: #2d3748;
+}
+
+/* Header improvements */
+.framer-1xrsae7 {
+  display: flex;
+  flex-flow: column;
+  place-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  gap: 20px;
+  height: 340px;
+  overflow: hidden;
+  padding: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.framer-1bxbq6 h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 3.125rem!important; /* Equivalent to 50px */
+  font-weight: 700;
+  letter-spacing: -2.6px;
+  text-align: center;
+  color: rgb(51, 51, 51);
+}
+
+.framer-11wfjty h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem!important; /* Equivalent to 24px */
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  line-height: 1.5em;
+  text-align: center;
+  color: rgb(136, 136, 136);
+}
+
+/* Shiva class background */
+.shiva {
+  background: 
+              url('https://framerusercontent.com/images/WdMSRmickdV58lojMa6WdzzYUhU.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 40px 0; /* Add padding to create space around content */
+}
+
+.Vamshi {
+  margin-left: 100px; /* Adjust the value as needed */
+  margin-right: 100px; /* Adjust the value as needed */
+  background-color: #fff;
+}
+
+.Anand {
+  margin-left: 100px; /* Adjust the value as needed */
+  margin-right: 100px; /* Adjust the value as needed */
+}
+
+/* Enhanced card styles */
+.tool-card {
+  background: white;
+  border: none;
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tool-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.tool-card .card-body {
+  padding: 2rem;
+}
+
+.tool-card .card-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+}
+
+.tool-card .feature-list li {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.tool-card .feature-list li strong {
+  color: #ffffff;
+}
+
+/* General container for the image */
+
+/* Content container */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.content-title {
+  font-size: 1.2rem!important;
+  font-weight: 700;
+  color: #2d3748;
+  margin-left: 1rem;
+}
+
+.content-description {
+  font-size: 0.3rem;
+  color: #feffff;
+  margin-bottom: 1.5rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Tick icon styling */
+.feature-item svg {
+  width: 20px; /* Set a fixed width for the tick icon */
+  height: 20px; /* Set a fixed height for the tick icon */
+  margin-right: 1rem; /* Space between icon and text */
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.button-group .btn {
+  font-size: 1rem;
+}
+
+/* Button improvements */
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #4299e1;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #3182ce;
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  border: 2px solid #4299e1;
+  color: #4299e1;
+}
+
+.btn-outline-primary:hover {
+  background-color: #4299e1;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Section improvements */
+.section-heading {
+  font-size: 2.5rem; /* Adjusted size */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #2d3748; /* Dark color for heading */
+}
+
+.framer-text {
+  margin: 0; /* Remove default margin */
+}
+
+/* Additional styles for the container */
+.framer-5rxxyt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px; /* Space between elements */
+  padding: 0; /* Remove padding */
+}
+
+/* Pricing section improvements */
+.pricing-section {
+  background-color: #f7fafc;
+  padding: 5rem 0;
+}
+
+.pricing-section .card {
+  border: none;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.pricing-section .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-section h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4299e1;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .header-title h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-heading {
+    font-size: 2rem;
+  }
+  
+  .tool-card {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Image improvements */
+.img-fluid {
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.02);
+}
+
+/* Updated shiva background class */
+.shiva {
+  background-color: #552754; /* Updated color */
+}
+
+/* Container styling */
+
+/* Individual card styling */
+
+/* Image styling */
+.image-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensures uniform image dimensions */
+  transition: transform 0.3s;
+}
+
+/* Text styling */
+.image-card p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Interactive hover effects */
+.image-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .image-card {
+      flex: 1 1 calc(50% - 20px); /* Two cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-card {
+      flex: 1 1 100%; /* One card per row */
+      max-width: 100%; /* Ensure full width on small screens */
+  }
+}
+
+.feature-image {
+  width: 50px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height to maintain aspect ratio */
+  object-fit: cover; /* Ensures the image doesn't stretch */
+  border-radius: 5px; /* Optional: Add some rounded corners */
+  transition: all 0.3s ease; /* Smooth transition on hover or other effects */
+}
+
+/* Optional: Hover effect for better interaction */
+.feature-image:hover {
+  transform: scale(0.9); /* Slightly shrink the image on hover */
+}
+
+.feature-description{
+  text-align: left;
+}
+
+.feature-title{
+  text-align: left;
+}
+
+
+
+/* Small screen media queries - only affects mobile views */
+@media (max-width: 768px) {
+  /* Header text responsiveness */
+  .framer-1xrsae7 {
+    height: auto;
+    min-height: 340px;
+    padding: 20px;
+  }
+
+  .framer-text {
+    font-size: 28px !important;
+  }
+
+  /* Container margins */
+  .Anand, .Vamshi {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  /* Image responsiveness */
+  .image-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Feature items adjustment */
+  .feature-item {
+    padding: 10px;
+  }
+
+  .feature-text {
+    max-width: calc(100% - 70px);
+  }
+
+  .feature-description {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* Button group spacing */
+  .mt-3 {
+    margin-top: 1.5rem !important;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    margin: 5px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+  /* Adjust feature icons for very small screens */
+  .image-wrapper {
+    margin-right: 10px;
+  }
+
+  .feature-image {
+    width: 40px;
+    height: 30px;
+  }
+
+  /* Text adjustments for readability */
+  .feature-title {
+    font-size: 0.85rem !important;
+  }
+
+  .feature-description {
+    font-size: 0.8rem !important;
+  }
+}

@@ -1,0 +1,47 @@
+.aaa {
+  padding-left: 15px; /* Reduced padding */
+}
+
+.resource-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+}
+
+.resource-link__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  width: 100%; /* Make the width dynamic */
+  max-width: 250px; /* Slightly increased max-width for better layout */
+}
+
+.resource-link__image-wrapper {
+  height: 150px;
+}
+
+.video-embed-container {
+  width: 100%; /* Adjust width dynamically */
+  max-width: 500px; /* Control max width for large screens */
+  height: 250px;
+  margin-bottom: 20px; /* Add space below each video */
+}
+
+.video-embed {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .aaa {
+    padding-left: 10px; /* Further reduce padding on small screens */
+  }
+
+  .video-embed-container {
+    height: 200px; /* Reduce iframe height for smaller devices */
+    margin-bottom: 100px; /* Add space below each video on small screens */
+  }
+}

@@ -1,0 +1,98 @@
+/* Footer General Styling */
+
+
+.footer-container {
+  background-color: #03023e;
+  color: #ffffff;
+  padding: 2rem 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-background {
+  background-color:  #03023e;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-description {
+  font-size: 0.9rem;
+  color: #bbbbbb;
+}
+
+/* Subscription Form */
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscribe-input {
+  border-radius: 10px;
+  padding: 0.5rem;
+  border: 1px solid #bbbbbb;
+  width: 70%; /* Adjust width for alignment */
+  font-size: 1rem;
+}
+
+.subscribe-button {
+  background-color: #ffffff !important; /* White background */
+  border: 1px solid #985613; /* Dark border to match theme */
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  color: #fcfcfd; /* Button text white */
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.2s, color 0.2s;
+}
+
+.subscribe-button:hover {
+  background-color: #03023e; /* Dark background on hover */
+  color: #ffffff; /* Text white on hover */
+  transform: scale(1.05);
+}
+
+.community-text {
+  font-size: 0.9rem;
+  color: #fcf9f9;
+  font-style: ita;
+}
+
+/* Quick Links */
+.footer-links .footer-link {
+  font-size: 0.9rem;
+  color: #bbbbbb;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links .footer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Social Icons (Text) */
+.social-icons .social-icon {
+  font-size: 0.9rem !important; /* Reduced text size with !important */
+  color: #ffffff !important; /* White text color */
+  margin: 0 0.5rem !important;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+}
+
+
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    text-align: center;
+  }
+}
+
+
