@@ -13,65 +13,77 @@ import './ProductsTools.css';
 const PricingCard = ({ title, price, features, buttonText }) => {
   return (
     <Card className="pricing-card h-100 position-relative">
-  <Card.Body className="d-flex flex-column p-4">
-    {/* Header section */}
-    <Card.Title className="text-left mb-4">
-      <h3 className="mb-0">{title}</h3>
-      <div className="price mt-3">
-        <span>{price}</span>
-        <span className="text-muted ms-2" style={{ fontSize: '0.8rem' }}>/month</span>
-      </div>
-    </Card.Title>
-    
-    {/* Features section */}
-    <div className="features flex-grow-1">
-      {features.map((feature, index) => (
-        <div key={index} className="feature-item flex items-start mb-4">
-          <div className="feature-icon mr-3 flex-shrink-0">
-            {index < features.length - 1 && (
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="mt-1"
-              >
-                <circle cx="12" cy="12" r="12" fill="#090909"/>
-                <path
-                  d="M17 8L10 15L7 12"
-                  stroke="#FFFFFF"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            )}
+      <Card.Body className="d-flex flex-column p-4">
+        {/* Header section */}
+        <Card.Title className="text-left mb-4">
+          <h3 className="mb-0">{title}</h3>
+          <div className="price mt-3">
+            <span>{price}</span>
+            <span className="text-muted ms-2" style={{ fontSize: '0.8rem' }}>/month</span>
           </div>
-          <span className="feature-text leading-tight" style={{ marginLeft: index === features.length - 1 ? '36px' : '0' }}>
-            {feature}
-          </span>
+        </Card.Title>
+        
+        {/* Features section */}
+        <div className="features flex-grow-1">
+          {features.map((feature, index) => (
+            <div 
+              key={index} 
+              className={`feature-item flex items-start mb-4 ${
+                index === features.length - 1 ? 'last-feature' : ''
+              }`}
+            >
+              <div className="feature-icon mr-3 flex-shrink-0">
+                {index < features.length - 1 && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="mt-1"
+                  >
+                    <circle cx="12" cy="12" r="12" fill="#090909"/>
+                    <path
+                      d="M17 8L10 15L7 12"
+                      stroke="#FFFFFF"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                )}
+              </div>
+              <span 
+                className={`feature-text leading-tight ${
+                  index === features.length - 1 ? 'text-center w-full' : ''
+                }`}
+                style={{ 
+                  marginLeft: index === features.length - 1 ? '0' : '0',
+                  display: index === features.length - 1 ? 'block' : 'inline'
+                }}
+              >
+                {feature}
+              </span>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
 
-    {/* Button section - positioned at bottom */}
-    <div className="text-center mt-4">
-      <Button 
-        variant="primary" 
-        className="w-75 pricing-card-button bg-black"
-        style={{
-          backgroundColor: '#4299e1',
-          border: 'none',
-          padding: '10px 0'
-        }}
-      >
-        {buttonText}
-      </Button>
-    </div>
-  </Card.Body>
-</Card>
-
+        {/* Button section - positioned at bottom */}
+        <div className="text-center mt-4">
+          <Button 
+            variant="primary" 
+            className="w-75 pricing-card-button bg-black"
+            style={{
+              backgroundColor: '#4299e1',
+              border: 'none',
+              padding: '10px 0'
+            }}
+          >
+            {buttonText}
+          </Button>
+        </div>
+      </Card.Body>
+    </Card>
   );
 };
 
