@@ -9,10 +9,51 @@
 .hero-section {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    height: 83vh; /* Full viewport height */
     overflow: hidden;
 }
 
+
+.framer-text-anand {
+  --framer-font-family: "Poppins", "Poppins Placeholder", sans-serif;
+  --framer-font-size: 20px; /* Default size for larger screens */
+  --framer-font-weight: 600;
+  --framer-letter-spacing: 0px;
+  --framer-text-alignment: center;
+  --framer-text-color: rgb(255, 255, 255);
+
+  font-family: var(--framer-font-family);
+  font-size: var(--framer-font-size);
+  font-weight: var(--framer-font-weight);
+  letter-spacing: var(--framer-letter-spacing);
+  text-align: var(--framer-text-alignment);
+  color: var(--framer-text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .framer-text-anand {
+    --framer-font-size: 18px;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .framer-text-anand {
+    --framer-font-size: 16px;
+    text-align: center; /* Ensure text remains centered */
+    padding: 0 10px; /* Add slight padding for better spacing */
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .framer-text-anand {
+    --framer-font-size: 14px;
+  }
+}
 /* Hero Background Video */
 .hero-background {
     position: absolute;
@@ -32,18 +73,96 @@
     left: 0;
 }
 
+
+/* Hero text */
+/* Default styles remain the same */
+.framer-text-shiva {
+  --framer-font-selector: R0Y7SW50ZXItNTAw;
+  --framer-font-family: "Inter", "Inter Placeholder", sans-serif;
+  --framer-font-size: 38px; /* Slightly reduced */
+  --framer-font-weight: 500;
+  --framer-letter-spacing: -0.5px;
+  --framer-line-height: 1.3em;
+  --framer-text-alignment: center;
+  --framer-text-color: rgba(255, 255, 255, 0.6);
+
+  font-family: var(--framer-font-family);
+  font-size: var(--framer-font-size);
+  font-weight: var(--framer-font-weight);
+  letter-spacing: var(--framer-letter-spacing);
+  line-height: var(--framer-line-height);
+  text-align: var(--framer-text-alignment);
+  color: var(--framer-text-color);
+  margin:0;
+  padding: 0;
+  font-weight:600;
+  
+}
+
+/* Responsive text scaling for tablets */
+@media (max-width: 1024px) {
+  .framer-text-shiva {
+    --framer-font-size: 34px;
+  }
+  .large-text-shiva {
+    --framer-font-size: 40px;
+  }
+}
+
+/* Responsive text scaling for mobile screens */
+@media (max-width: 768px) {
+  .framer-text-shiva {
+    --framer-font-size: 28px;
+  }
+  .large-text-shiva {
+    --framer-font-size: 32px;
+  }
+}
+
+/* Fine-tuned sizes for extra small screens */
+@media (max-width: 576px) {
+  .framer-text-shiva {
+    --framer-font-size: 24px;
+  }
+  .large-text-shiva {
+    --framer-font-size: 28px;
+  }
+}
+
+/* Additional adjustments for very small devices */
+@media (max-width: 400px) {
+  .framer-text-shiva {
+    --framer-font-size: 22px;
+  }
+  .large-text-shiva {
+    --framer-font-size: 26px;
+  }
+}
+
+.large-text-shiva {
+  --framer-font-size: 46px;
+  font-size: var(--framer-font-size);
+}
+
+.white-text-shiva {
+  --framer-text-color: rgb(255, 255, 255);
+  color: var(--framer-text-color);
+}
+
 /* Content Overlay */
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    padding: 0 20px;
-    max-width: 800px;
-    z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  max-width: 1000px; /* Increase from 800px to 1000px */
+  width: 90%; /* Adjust responsiveness */
+  z-index: 2;
 }
+
 
 /* Subheading Text */
 .hero-subheading {
@@ -117,7 +236,7 @@
   .service-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; /* Ensure the content is aligned to the top */
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -125,15 +244,14 @@
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
   .service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   }
   
-  .image-container {
+  .image-container-shiva {
     width: 100%;
-    height: 350px;
+    height: 200px; /* Set a fixed height for consistent alignment */
     border-radius: 12px;
     overflow: hidden;
   }
@@ -143,6 +261,8 @@
     height: 100%;
     object-fit: cover;
   }
+
+  
   
   .content-container {
     margin-top: 20px;
@@ -264,7 +384,7 @@
  /* General FAQ Section */
 .faq-section {
     padding: 50px 0;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
   }
   
   .faq-title h2 {
@@ -389,7 +509,7 @@
     margin-bottom: 15px;
   }
 
-  .hero-heading {
+  .framer-text-shiva {
     font-size: 32px;
     margin-bottom: 15px;
   }

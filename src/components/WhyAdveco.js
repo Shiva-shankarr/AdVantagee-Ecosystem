@@ -62,7 +62,7 @@ const WhyAdveco = () => {
         <div className="whyadveco-text-content justify-content-center">
           <h1 className="justify-content-center">
             This disconnect creates barriers to innovation, leaves learners unmotivated, and deprives them of the skills they need to thrive in a fast-evolving world.{' '}
-            <span className="whyadveco-highlighted-text">Adveco Ecosystem</span> was built to solve these challenges by integrating neuroscience-backed approaches into community-driven platforms.
+            <span className="whyadveco-highlighted-text">AdVantage Ecosystem</span> was built to solve these challenges by integrating neuroscience-backed approaches into community-driven platforms.
           </h1>
         </div>
 
@@ -71,18 +71,33 @@ const WhyAdveco = () => {
 
       <div className="container mb-5" style={{ display: 'flex', width: '100%', padding: '20px' }}>
         <div className="whyadveco-content" style={{ display: 'flex', flexDirection: 'column', gap: '15px', maxWidth: '600px' }}>
-          <h1 className="whyadveco-framer-text custom-heading mt-5 mb-5">
-            <span
-              className="whyadveco-framer-text displa"
-              data-text-fill="true"
-              style={{
-                backgroundImage:
-                  'conic-gradient(from 0deg at 26.3% 14%, rgb(1, 33, 53) 0deg, rgba(51, 51, 51, 0) 360deg)',
-              }}
-            >
-              The Science Behind <br />the Advantage <br />by Adveco
-            </span>
-          </h1>
+        <h1
+  className="whyadveco-framer-text custom-heading mt-5 mb-5"
+  style={{
+    '--font-selector': 'R0Y7SW50ZXItNzAw',
+    '--framer-font-family': '"Inter", "Inter Placeholder", sans-serif',
+    '--framer-font-size': '64px',
+    '--framer-font-weight': '700',
+    '--framer-letter-spacing': '-2px',
+    '--framer-text-alignment': 'left',
+    '--framer-text-color': 'rgb(51, 51, 51)',
+    textAlign: 'left', // Align text to the left
+    color: 'rgb(51, 51, 51)', // Set the text color
+  }}
+>
+  <span
+    data-text-fill="true"
+    style={{
+      backgroundImage:
+        'conic-gradient(from 0deg at 13.3% 14%, rgb(1, 33, 53) 0deg, rgba(51, 51, 51, 0) 360deg)',
+      WebkitBackgroundClip: 'text',
+      backgroundClip: 'text',
+      color: 'transparent', // Make the text color transparent to show the gradient
+    }}
+  >
+    The Science Behind <br />the Advantage <br />by Adveco
+  </span>
+</h1>
 
           <div className="whyadveco-bookmark curiosity mt-2" style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px', transition: 'transform 0.2s' }}>
             <img src="https://framerusercontent.com/images/wUNWTcJELo79eQ9lb3q3VK8Es.png" alt="Curiosity Image" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '10px' }} />
@@ -116,7 +131,7 @@ const WhyAdveco = () => {
             <h2 className="whyadveco-heading-text">Curious?</h2>
           </div>
           <div className="whyadveco-button-container">
-            <button className="whyadveco-btn-white">Let's Talk</button>
+            <button className="whyadveco-btn-white rounded-5">Let's Talk</button>
           </div>
         </div>
       </div>

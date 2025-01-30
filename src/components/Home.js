@@ -53,15 +53,23 @@ const Home = () => {
 
         {/* Hero Content */}
         <div className="hero-content">
-          <h4 className="hero-subheading">
-            Empowering Learning Through <br />
-            Community, Curiosity, and Collaboration.
-          </h4>
+        <h1 className="framer-text-anand">
+    <span className="framer-text-anand" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
+      Empowering Learning Through
+    </span>
+    <br />
+    Community, Curiosity, and Collaboration.
+</h1>
 
-          <h1 className="hero-heading">
-            Unlock your potential with our <br />
-            Neuroscience-backed approach.
-          </h1>
+          <h1 className="framer-text-shiva fw-bold mb-4">
+  <span className="framer-text-shiva large-text-shiva">Unlock your potential with our </span>
+  <span className="framer-text-shiva large-text-shiva">
+    <br className="framer-text-shiva" />
+  </span>
+  <span className="framer-text-shiva large-text-shiva white-text-shiva">Neuroscience</span>
+  <span className="framer-text-shiva large-text-shiva">-backed approach.</span>
+</h1>
+
 
           <h4 className="hero-description">
             Transform how you learn, connect, and grow. Adveco Ecosystem offers innovative tools designed to fuel motivation, foster collaboration, and revolutionize education.
@@ -116,7 +124,7 @@ const Home = () => {
             {/* Card 1: Community Spaces */}
             <Col xs={12} md={4}>
               <div className="service-card">
-                <div className="image-container">
+                <div className="image-container-shiva">
                   <img src="https://framerusercontent.com/images/DnnzmlNClYRqsEf7xwWWwVQQFRk.jpg?scale-down-to-1024" alt="Community Spaces" className="service-image" />
                 </div>
                 <div className="content-container">
@@ -130,7 +138,7 @@ const Home = () => {
             {/* Card 2: Microcampus Platform */}
             <Col xs={12} md={4}>
               <div className="service-card">
-                <div className="image-container">
+                <div className="image-container-shiva">
                   <img src="https://framerusercontent.com/images/U556Zr9ySyBIwrKhO304cic8OI.jpg?scale-down-to-1024" alt="Microcampus Platform" className="service-image" />
                 </div>
                 <div className="content-container">
@@ -144,7 +152,7 @@ const Home = () => {
             {/* Card 3: Quest Lab */}
             <Col xs={12} md={4}>
               <div className="service-card">
-                <div className="image-container">
+                <div className="image-container-shiva">
                   <img src="https://framerusercontent.com/images/rObpmbP7nGyCP4OhYUOqgSn5lj0.jpg?scale-down-to-1024" alt="Quest Lab" className="service-image" />
                 </div>
                 <div className="content-container">
@@ -171,35 +179,97 @@ const Home = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className={`faq-section ${inViewFAQ ? 'fade-in' : 'fade-out'}`} ref={refFAQ}>
-        <Container>
-          <div className="faq-title">
-            <h2>FAQs</h2>
-          </div>
-          <Row>
-            {faqData.map((faq, index) => (
-              <Col xs={12} key={index} className="faq-item-wrapper">
-                <div className={`faq-item ${openIndex === index ? "active" : ""}`} onClick={() => toggleAnswer(index)}>
-                  <div className="faq-question">
-                    <div className="faq-plus-icon">
-                      <div className="horizontal-line"></div>
-                      <div className={`vertical-line ${openIndex === index ? "open" : ""}`}></div>
-                    </div>
-                    <p className="faq-question-text">{faq.question}</p>
+     {/* FAQ Section */}
+     <section className={`faq-section ${inViewFAQ ? 'fade-in' : 'fade-out'}`} ref={refFAQ}>
+      <Container>
+        <div className="text-center mb-5">
+          <h2 className="faq-heading display-5 fw-bold">FAQs</h2>
+        </div>
+        <Row className="justify-content-center">
+          {faqData.map((faq, index) => (
+            <Col xs={12} key={index} className="mb-3">
+              <div 
+                className={`faq-item ${openIndex === index ? "active" : ""}`} 
+                onClick={() => toggleAnswer(index)}
+                style={{
+                  backgroundColor: '#f2f2f2',
+                  borderRadius: '20px',
+                  padding: '20px',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                <div className="d-flex align-items-center">
+                  <div 
+                    style={{
+                      width: '24px',
+                      height: '24px',
+                      position: 'relative',
+                      marginRight: '15px',
+                      flexShrink: 0
+                    }}
+                  >
+                    <div 
+                      style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        width: '14px',
+                        height: '2px',
+                        backgroundColor: '#333',
+                        transform: 'translate(-50%, -50%)',
+                        opacity: '0.3',
+                        borderRadius: '2px'
+                      }}
+                    />
+                    <div 
+                      style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        width: '2px',
+                        height: '14px',
+                        backgroundColor: '#333',
+                        transform: `translate(-50%, -50%) ${openIndex === index ? 'scaleY(0)' : 'scaleY(1)'}`,
+                        opacity: '0.3',
+                        borderRadius: '2px',
+                        transition: 'transform 0.3s ease'
+                      }}
+                    />
                   </div>
-                  {openIndex === index && (
-                    <div className="faq-answer">
-                      <p>{faq.answer}</p>
-                    </div>
-                  )}
+                  <h3 
+                    style={{
+                      margin: 0,
+                      fontSize: '18px',
+                      fontWeight: 600,
+                      lineHeight: '24px',
+                      color: '#333'
+                    }}
+                  >
+                    {faq.question}
+                  </h3>
                 </div>
-                {index !== faqData.length - 1 && <div className="faq-divider"></div>}
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
+                
+                {openIndex === index && (
+                  <div 
+                    style={{
+                      marginTop: '15px',
+                      paddingTop: '15px',
+                      borderTop: '1px solid rgba(0,0,0,0.1)',
+                      marginLeft: '39px'
+                    }}
+                  >
+                    <p style={{ margin: 0, color: '#666', lineHeight: '1.5' }}>
+                      {faq.answer}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </section>
     </div>
   );
 };

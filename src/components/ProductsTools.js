@@ -6,7 +6,77 @@ import {
   FaBusinessTime, FaBriefcase 
 } from "react-icons/fa";
 import './ProductsTools.css';
-import PricingCard from './PricingCard';
+
+
+
+// PricingCard Component
+const PricingCard = ({ title, price, features, buttonText }) => {
+  return (
+    <Card className="pricing-card h-100 position-relative">
+  <Card.Body className="d-flex flex-column p-4">
+    {/* Header section */}
+    <Card.Title className="text-left mb-4">
+      <h3 className="mb-0">{title}</h3>
+      <div className="price mt-3">
+        <span>{price}</span>
+        <span className="text-muted ms-2" style={{ fontSize: '0.8rem' }}>/month</span>
+      </div>
+    </Card.Title>
+    
+    {/* Features section */}
+    <div className="features flex-grow-1">
+      {features.map((feature, index) => (
+        <div key={index} className="feature-item flex items-start mb-4">
+          <div className="feature-icon mr-3 flex-shrink-0">
+            {index < features.length - 1 && (
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="mt-1"
+              >
+                <circle cx="12" cy="12" r="12" fill="#090909"/>
+                <path
+                  d="M17 8L10 15L7 12"
+                  stroke="#FFFFFF"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            )}
+          </div>
+          <span className="feature-text leading-tight" style={{ marginLeft: index === features.length - 1 ? '36px' : '0' }}>
+            {feature}
+          </span>
+        </div>
+      ))}
+    </div>
+
+    {/* Button section - positioned at bottom */}
+    <div className="text-center mt-4">
+      <Button 
+        variant="primary" 
+        className="w-75 pricing-card-button bg-black"
+        style={{
+          backgroundColor: '#4299e1',
+          border: 'none',
+          padding: '10px 0'
+        }}
+      >
+        {buttonText}
+      </Button>
+    </div>
+  </Card.Body>
+</Card>
+
+  );
+};
+
+
+ 
 
 
 const ProductsTools = () => {
@@ -99,7 +169,7 @@ const ProductsTools = () => {
       <img
         src="https://framerusercontent.com/images/DnnzmlNClYRqsEf7xwWWwVQQFRk.jpg?scale-down-to=1024"
         alt="Community Spaces"
-        className="img-fluid rounded shadow"
+        className="img-fluid  shadow"
       />
     </div>
   </Col>
@@ -243,7 +313,7 @@ const ProductsTools = () => {
       <img
         src="https://framerusercontent.com/images/U556Zr9ySyBIwrKhO304cic8OI.jpg?scale-down-to=2048"
         alt="Community Spaces"
-        className="img-fluid rounded shadow"
+        className="img-fluid rounde shadow"
       />
     </div>
   </Col>
@@ -392,7 +462,7 @@ creating a shared sense of direction and accomplishment.
       <img
         src="https://framerusercontent.com/images/rObpmbP7nGyCP4OhYUOqgSn5lj0.jpg?scale-down-to=2048"
         alt="Community Spaces"
-        className="img-fluid rounded shadow"
+        className="img-fluid rounde shadow"
       />
     </div>
   </Col>
@@ -523,26 +593,26 @@ and build connections
       </section>
 
       {/* Pricing Section */}
-      <div className='Vamshi'>
-      <section className="pricing-section py-5 ">
-        <Container>
-          <h2 className="text-center mb-5">Choose Your Plan</h2>
-          <Row className="justify-content-center">
-            {pricingPlans.map((plan, index) => (
-              <Col md={4} key={index} className="mb-4">
-                <PricingCard 
-                  title={plan.title} 
-                  price={plan.price} 
-                  features={plan.features} 
-                  buttonText={plan.buttonText} 
-                  description={plan.description} 
-                />
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-    </div>
+     {/* Pricing Section */}
+     <div className="Vamshi p-5">
+        <section className="pricing-section py-5">
+          <Container>
+            <h2 className="text-center mb-5">Choose Your Plan</h2>
+            <Row className="justify-content-center">
+              {pricingPlans.map((plan, index) => (
+                <Col md={4} key={index} className="mb-4">
+                  <PricingCard 
+                    title={plan.title} 
+                    price={plan.price} 
+                    features={plan.features} 
+                    buttonText={plan.buttonText} 
+                  />
+                </Col>
+              ))}
+            </Row>
+          </Container>
+        </section>
+      </div>
     </div>
   );
 };

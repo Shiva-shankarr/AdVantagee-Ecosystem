@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Nav } from 'react-bootstrap';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
-import './Footer.css'; // Import custom CSS file
+import './Footer.css';
 
 function Footer() {
   const [email, setEmail] = useState('');
 
-  // Handle subscription form
   const handleSubscribe = (e) => {
     e.preventDefault();
     alert(`Subscribed with email: ${email}`);
@@ -26,68 +24,72 @@ function Footer() {
 
   return (
     <footer className="footer-container">
-      <Container fluid className="footer-background px-5 ">
-        <Row>
-          {/* Section 2: Email Subscription */}
-<Col xs={12} md={4} className="footer-subscribe">
-  <div>
-    <h3 className="fw-bold text-cente ml-12">Adveco</h3>
-    <Form onSubmit={handleSubscribe} className="subscribe-form">
-      <Form.Group className="d-flex align-items-center mb-2">
-        <Form.Control
-          type="email"
-          placeholder="Your email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="subscribe-input me-2"
-        />
-        <Button type="submit" variant="white" className="subscribe-button">
-          Subscribe
-        </Button>
-      </Form.Group>
-      <p className="community-text mt-2 text-center">Community Space</p>
-    </Form>
-  </div>
-</Col>
+      <Container fluid className="footer-background px-3 px-md-5">
+        <Row className="gy-4">
+          {/* Section 1: Email Subscription */}
+          <Col xs={12} md={4} className="footer-subscribe">
+            <Container className="subscribe-container px-0">
+              <Row className="align-items-start">
+                <h3 className="fw-bold text-start mb-3">Adveco</h3>
+              </Row>
+
+              <Row className="align-items-center">
+                <Form onSubmit={handleSubscribe} className="subscribe-form">
+                  <Form.Group className="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-2 mb-2">
+                    <Form.Control
+                      type="email"
+                      placeholder="Your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      className="subscribe-input"
+                    />
+                    <Button type="submit" variant="dark" className="subscribe-button">
+                      Subscribe
+                    </Button>
+                  </Form.Group>
+                </Form>
+              </Row>
+
+              <Row className="align-items-start">
+                <p className="community-text mt-2 text-start">Community Space</p>
+              </Row>
+            </Container>
+          </Col>
 
           {/* Section 2: Social Links */}
-          <Col xs={12} md={4} className="text-center">
-            <h5 className="text-white fw-bold">Follow Us</h5>
-            <div className="social-icons  d-flex justify-content-center">
-  <span className="social-icon  text-white mx-2" onClick={() => window.open("https://facebook.com", "_blank")}>
-    Facebook
-  </span>
-  <span className="social-icon text-white mx-2" onClick={() => window.open("https://twitter.com", "_blank")}>
-    Twitter
-  </span>
-  <span className="social-icon text-white mx-2" onClick={() => window.open("https://linkedin.com", "_blank")}>
-    LinkedIn
-  </span>
-  <span className="social-icon text-white mx-2" onClick={() => window.open("https://instagram.com", "_blank")}>
-    Instagram
-  </span>
-</div>
-
-
-
+          <Col xs={12} md={4} className="text-center text-md-start">
+            <h5 className="text-white fw-bold mb-3">Follow Us</h5>
+            <div className="social-icons d-flex flex-wrap justify-content-center justify-content-md-start gap-3">
+              <span className="social-icon text-white" onClick={() => window.open("https://facebook.com", "_blank")}>
+                Facebook
+              </span>
+              <span className="social-icon text-white" onClick={() => window.open("https://twitter.com", "_blank")}>
+                Twitter
+              </span>
+              <span className="social-icon text-white" onClick={() => window.open("https://linkedin.com", "_blank")}>
+                LinkedIn
+              </span>
+              <span className="social-icon text-white" onClick={() => window.open("https://instagram.com", "_blank")}>
+                Instagram
+              </span>
+            </div>
           </Col>
-          
 
           {/* Section 3: Quick Links */}
           <Col xs={12} md={4} className="footer-links">
-            <h5 className="footer-title">Quick Links</h5>
-            <div className="row">
-              <div className="col-6">
+            <h5 className="footer-title mb-3">Quick Links</h5>
+            <div className="row row-cols-2 row-cols-sm-2 gy-2">
+              <div className="col">
                 {navLinks.slice(0, Math.ceil(navLinks.length / 2)).map((link) => (
-                  <Nav.Link key={link.href} href={link.href} className="footer-link">
+                  <Nav.Link key={link.href} href={link.href} className="footer-link d-block mb-2">
                     {link.label}
                   </Nav.Link>
                 ))}
               </div>
-              <div className="col-6">
+              <div className="col">
                 {navLinks.slice(Math.ceil(navLinks.length / 2)).map((link) => (
-                  <Nav.Link key={link.href} href={link.href} className="footer-link">
+                  <Nav.Link key={link.href} href={link.href} className="footer-link d-block mb-2">
                     {link.label}
                   </Nav.Link>
                 ))}
@@ -95,10 +97,6 @@ function Footer() {
             </div>
           </Col>
         </Row>
-
-        
-
-       
       </Container>
     </footer>
   );
