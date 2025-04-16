@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import './ContactUs.css'
 
 
@@ -10,7 +10,7 @@ const ContactUs = () => {
     message: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleInputChange = (e) => {
@@ -23,7 +23,7 @@ const ContactUs = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    // setIsSubmitting(true);
     
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -33,7 +33,7 @@ const ContactUs = () => {
     } catch (error) {
       setSubmitStatus('error');
     } finally {
-      setIsSubmitting(false);
+      // setIsSubmitting(false);
       setTimeout(() => setSubmitStatus(null), 3000);
     }
   };
