@@ -1,14 +1,12 @@
 /* styles.css */
 
+/* Base container for centering content */
 .bbbb {
-  
   justify-content: center; /* Centers horizontally */
   align-items: center;     /* Centers vertically */
   padding: 0px;           /* Adds space around the content */
   text-align: center;      /* Ensures the text inside is centered */
 }
-
-
 
 /* Image container styling */
 .image-container {
@@ -54,8 +52,7 @@
   transform: scale(0.9); /* Slightly shrink the image on hover */
 }
 
-
-/* Enhanced base styles */
+/* Enhanced base styles for the body */
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6 !important;
@@ -79,7 +76,7 @@ body {
 
 .framer-1bxbq6 h1 {
   font-family: "Inter", sans-serif;
-  font-size: 3.125rem!important; /* Equivalent to 50px */
+  font-size: 3.125rem !important; /* Equivalent to 50px */
   font-weight: 700;
   letter-spacing: -2.6px;
   text-align: center;
@@ -88,7 +85,7 @@ body {
 
 .framer-11wfjty h2 {
   font-family: "Inter", sans-serif;
-  font-size: 1.5rem!important; /* Equivalent to 24px */
+  font-size: 1.5rem !important; /* Equivalent to 24px */
   font-weight: 500;
   letter-spacing: -0.5px;
   line-height: 1.5em;
@@ -98,14 +95,14 @@ body {
 
 /* Shiva class background */
 .shiva {
-  background: 
-              url('https://framerusercontent.com/images/WdMSRmickdV58lojMa6WdzzYUhU.jpg');
+  background: url('https://framerusercontent.com/images/WdMSRmickdV58lojMa6WdzzYUhU.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   padding: 40px 0; /* Add padding to create space around content */
 }
 
+/* Container margins */
 .Vamshi {
   margin-left: 100px; /* Adjust the value as needed */
   margin-right: 100px; /* Adjust the value as needed */
@@ -150,8 +147,6 @@ body {
   color: #ffffff;
 }
 
-/* General container for the image */
-
 /* Content container */
 .content-container {
   display: flex;
@@ -167,7 +162,7 @@ body {
 }
 
 .content-title {
-  font-size: 1.2rem!important;
+  font-size: 1.2rem !important;
   font-weight: 700;
   color: #2d3748;
   margin-left: 1rem;
@@ -262,11 +257,6 @@ body {
 }
 
 /* Pricing section improvements */
-/* Pricing Section Styles */
-/* PricingCard specific styles */
-/* PricingCard specific styles */
-
-/* General styling for the pricing cards */
 .pricing-card {
   border: none !important;
   border-radius: 12px !important;
@@ -280,14 +270,12 @@ body {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Styling for the price text */
 .pricing-card .price {
   font-size: 2rem;
   font-weight: bold;
   color: #090909;
 }
 
-/* Styling for feature items */
 .pricing-card .feature-item {
   margin-bottom: 1rem;
   text-align: left; /* Align content to the left */
@@ -306,7 +294,6 @@ body {
   justify-content: center;
 }
 
-/* Styling for the button */
 .pricing-card .btn-primary:hover {
   background-color: #0b0b0b !important;
 }
@@ -315,97 +302,88 @@ body {
   background-color: #090909;
 }
 
-/* Container for the pricing section */
-.Vamshi {
-  margin-left: 100px;
-  margin-right: 100px;
-  background-color: #fff;
-}
-
 /* Mobile responsiveness for the pricing cards */
 @media (max-width: 1024px) {
   .Vamshi {
-    margin-left: 20px;
-    margin-right: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
   }
-  
+
   .pricing-card {
-    padding: 15px; /* Reduce padding on smaller screens */
+      padding: 15px; /* Reduce padding on smaller screens */
   }
 
   .pricing-card .price {
-    font-size: 1.75rem;
+      font-size: 1.75rem;
   }
 
   .pricing-card .feature-text {
-    font-size: 0.85rem;
+      font-size: 0.85rem;
   }
 }
 
 /* Further adjustments for smaller mobile screens */
 @media (max-width: 768px) {
   .Vamshi {
-    margin-left: 15px;
-    margin-right: 15px;
+      margin-left: 15px;
+      margin-right: 15px;
   }
 
   .pricing-card {
-    margin-bottom: 2rem; /* Ensure spacing between cards */
+      margin-bottom: 2rem; /* Ensure spacing between cards */
   }
 
   .pricing-card .price {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
   }
 
   .pricing-card .feature-text {
-    font-size: 0.8rem;
+      font-size: 0.8rem;
   }
 
-  /* Adjust card width for smaller devices */
   .pricing-card .btn-primary {
-    font-size: 0.9rem;
-    width: 100%; /* Ensure button takes full width on small screens */
-    padding: 12px 0;
+      font-size: 0.9rem;
+      width: 100%; /* Ensure button takes full width on small screens */
+      padding: 12px 0;
   }
 
   .pricing-section h2 {
-    font-size: 2rem; /* Smaller heading size on mobile */
+      font-size: 2rem; /* Smaller heading size on mobile */
   }
 
   .pricing-card {
-    flex: 0 0 100%; /* Make each card full width on small screens */
+      flex: 0 0 100%; /* Make each card full width on small screens */
   }
 
   .pricing-card .feature-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-left: 0; /* Align feature text to the left */
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-left: 0; /* Align feature text to the left */
   }
 }
 
 /* Mobile first adjustments */
 @media (max-width: 576px) {
   .pricing-card .price {
-    font-size: 1.25rem; /* Reduce font size even further on very small screens */
+      font-size: 1.25rem; /* Reduce font size even further on very small screens */
   }
 
   .pricing-card .feature-text {
-    font-size: 0.75rem;
+      font-size: 0.75rem;
   }
 
   .pricing-card {
-    padding: 1px;
+      padding: 1px;
   }
 
-  /* Button adjustments for smaller screens */
   .pricing-card .btn-primary {
-    font-size: 1rem;
-    padding: 10px 0;
+      font-size: 1rem;
+      padding: 10px 0;
   }
 }
 
-
+/* Last feature section */
 .last-feature {
   display: flex;
   flex-direction: column;
@@ -420,36 +398,27 @@ body {
   margin: 0 !important;
 }
 
-
-
-
 /* Responsive improvements */
 @media (max-width: 768px) {
   .header-title h1 {
-    font-size: 2.5rem;
+      font-size: 2.5rem;
   }
-  
+
   .section-heading {
-    font-size: 2rem;
+      font-size: 2rem;
   }
-  
+
   .tool-card {
-    margin-bottom: 2rem;
+      margin-bottom: 2rem;
   }
 }
-
-
 
 /* Updated shiva background class */
 .shiva {
   background-color: #552754; /* Updated color */
 }
 
-/* Container styling */
-
-/* Individual card styling */
-
-/* Image styling */
+/* Image card styling */
 .image-card img {
   width: 100%;
   height: 200px;
@@ -457,7 +426,6 @@ body {
   transition: transform 0.3s;
 }
 
-/* Text styling */
 .image-card p {
   margin: 10px 0;
   font-size: 1.2rem;
@@ -496,278 +464,247 @@ body {
   transition: all 0.3s ease; /* Smooth transition on hover or other effects */
 }
 
-/* Optional: Hover effect for better interaction */
 .feature-image:hover {
   transform: scale(0.9); /* Slightly shrink the image on hover */
 }
 
-.feature-description{
+.feature-description {
   text-align: left;
 }
 
-.feature-title{
+.feature-title {
   text-align: left;
 }
 
-
-
-/* Small screen media queries - only affects mobile views */
-/* Small screen media queries - only affects mobile views */
+/* Small screen media queries */
 @media (max-width: 768px) {
-  /* Header text responsiveness */
   .framer-1xrsae7 {
-    height: auto;
-    min-height: 340px;
-    padding: 20px;
+      height: auto;
+      min-height: 340px;
+      padding: 20px;
   }
 
   .framer-text {
-    font-size: 28px !important;
+      font-size: 28px !important;
   }
 
-  /* Container margins */
   .Anand, .Vamshi {
-    margin-left: 15px;
-    margin-right: 15px;
+      margin-left: 15px;
+      margin-right: 15px;
   }
 
-  /* Image responsiveness */
   .image-container {
-    width: 100%;
-    margin-bottom: 20px;
+      width: 100%;
+      margin-bottom: 20px;
   }
 
   .image-container img {
-    width: 100%;
-    height: auto;
+      width: 100%;
+      height: auto;
   }
 
-  /* Feature items adjustment */
   .feature-item {
-    padding: 10px;
+      padding: 10px;
   }
 
   .feature-text {
-    max-width: calc(100% - 70px);
+      max-width: calc(100% - 70px);
   }
 
   .feature-description {
-    white-space: normal;
-    word-break: break-word;
+      white-space: normal;
+      word-break: break-word;
   }
 
-  /* Button group spacing */
   .mt-3 {
-    margin-top: 1.5rem !important;
+      margin-top: 1.5rem !important;
   }
 
   .btn {
-    padding: 0.5rem 1rem;
-    margin: 5px;
+      padding: 0.5rem 1rem;
+      margin: 5px;
   }
 }
 
 /* Extra small screens */
 @media (max-width: 576px) {
-  /* Adjust feature icons for very small screens */
   .image-wrapper {
-    margin-right: 10px;
+      margin-right: 10px;
   }
 
   .feature-image {
-    width: 40px;
-    height: 30px;
+      width: 40px;
+      height: 30px;
   }
 
-  /* Text adjustments for readability */
   .feature-title {
-    font-size: 0.85rem !important;
+      font-size: 0.85rem !important;
   }
 
   .feature-description {
-    font-size: 0.8rem !important;
+      font-size: 0.8rem !important;
   }
 }
 
-
 /* Enhanced responsive styles */
-
-/* Base responsive container adjustments */
 .bbbb {
   width: 100%;
   overflow-x: hidden;
 }
 
-/* Responsive header */
 @media (max-width: 768px) {
   .framer-1xrsae7 {
-    padding: 20px;
+      padding: 20px;
   }
-  
+
   .framer-1bxbq6 h1 {
-    font-size: 2rem !important;
-    letter-spacing: -1px;
+      font-size: 2rem !important;
+      letter-spacing: -1px;
   }
-  
+
   .framer-11wfjty h2 {
-    font-size: 1.125rem !important;
-    padding: 0 10px;
+      font-size: 1.125rem !important;
+      padding: 0 10px;
   }
-}
 
-/* Responsive section margins */
-@media (max-width: 768px) {
   .Anand, .Vamshi {
-    margin-left: 15px;
-    margin-right: 15px;
+      margin-left: 15px;
+      margin-right: 15px;
   }
-  
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
 
-/* Feature section responsive layout */
-@media (max-width: 768px) {
+  .container {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+
   .feature-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
   }
 
   .feature-item {
-    width: 100%;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
   }
 
   .image-wrapper {
-    min-width: 40px;
-    margin-right: 12px;
+      min-width: 40px;
+      margin-right: 12px;
   }
 
   .feature-image {
-    width: 40px;
-    height: 35px;
-    object-fit: contain;
+      width: 40px;
+      height: 35px;
+      object-fit: contain;
   }
 
   .feature-text {
-    flex: 1;
+      flex: 1;
   }
 
   .feature-title {
-    font-size: 1rem !important;
-    margin-bottom: 0.25rem;
+      font-size: 1rem !important;
+      margin-bottom: 0.25rem;
   }
 
   .feature-description {
-    font-size: 0.875rem !important;
-    line-height: 1.4;
-    white-space: normal;
+      font-size: 0.875rem !important;
+      line-height: 1.4;
+      white-space: normal;
   }
-}
 
-/* Card responsive styling */
-@media (max-width: 768px) {
   .content-container {
-    padding: 1rem;
+      padding: 1rem;
   }
 
   .content-header {
-    margin-bottom: 1rem;
+      margin-bottom: 1rem;
   }
 
   .content-title {
-    font-size: 1.5rem !important;
-    margin-bottom: 0.5rem;
+      font-size: 1.5rem !important;
+      margin-bottom: 0.5rem;
   }
 
   .image-container {
-    margin-bottom: 2rem;
+      margin-bottom: 2rem;
   }
 
   .image-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
   }
-}
 
-/* Button group responsive layout */
-@media (max-width: 768px) {
   .mt-3 {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 1.5rem;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 1.5rem;
   }
 
   .btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-    min-width: 120px;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      min-width: 120px;
   }
-}
 
-/* Section headings responsive */
-@media (max-width: 768px) {
   .framer-138czqo h1 {
-    font-size: 2rem !important;
-    letter-spacing: -1px;
-    margin-bottom: 1rem;
+      font-size: 2rem !important;
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
   }
 
   .framer-1r1x6d5 h2 {
-    font-size: 1rem !important;
-    line-height: 1.5;
-    padding: 0 10px;
+      font-size: 1rem !important;
+      line-height: 1.5;
+      padding: 0 10px;
   }
 }
 
-/* Extra small screen adjustments */
 @media (max-width: 576px) {
   .feature-item {
-    padding: 0.25rem;
+      padding: 0.25rem;
   }
 
   .image-wrapper {
-    min-width: 35px;
+      min-width: 35px;
   }
 
   .feature-image {
-    width: 35px;
-    height: 30px;
+      width: 35px;
+      height: 30px;
   }
 
   .feature-title {
-    font-size: 0.875rem !important;
+      font-size: 0.875rem !important;
   }
 
   .feature-description {
-    font-size: 0.8125rem !important;
+      font-size: 0.8125rem !important;
   }
 
   .btn {
-    min-width: 100px;
-    font-size: 0.8125rem;
+      min-width: 100px;
+      font-size: 0.8125rem;
   }
 }
 
 /* Pricing section responsive */
 @media (max-width: 768px) {
   .pricing-section {
-    padding: 2rem 0;
+      padding: 2rem 0;
   }
 
   .pricing-section .card {
-    margin-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
   }
 
   .pricing-section h3 {
-    font-size: 1.75rem;
+      font-size: 1.75rem;
   }
 }
 
@@ -776,6 +713,6 @@ body {
   .community-section,
   .microcampus-section,
   .quest-labs-section {
-    margin-bottom: 3rem;
+      margin-bottom: 3rem;
   }
 }

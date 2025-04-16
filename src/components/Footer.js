@@ -64,13 +64,13 @@ function Footer() {
               <span className="social-icon text-white" onClick={() => window.open("https://facebook.com", "_blank")}>
                 Facebook
               </span>
-              <span className="social-icon text-white" onClick={() => window.open("https://twitter.com", "_blank")}>
+              <span className="social-icon text-white" onClick={() => window.open("https://x.com/Adv_ecosystem", "_blank")}>
                 Twitter
               </span>
-              <span className="social-icon text-white" onClick={() => window.open("https://linkedin.com", "_blank")}>
+              <span className="social-icon text-white" onClick={() => window.open("https://www.linkedin.com/company/advantageecosystem/posts/?feedView=all", "_blank")}>
                 LinkedIn
               </span>
-              <span className="social-icon text-white" onClick={() => window.open("https://instagram.com", "_blank")}>
+              <span className="social-icon text-white" onClick={() => window.open("https://www.instagram.com/advantage.ecosystem/", "_blank")}>
                 Instagram
               </span>
             </div>

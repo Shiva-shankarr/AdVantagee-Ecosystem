@@ -40,9 +40,9 @@ const ContactUs = () => {
 
   const socialLinks = [
     { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' }
+    { icon: Twitter, href: 'https://x.com/Adv_ecosystem', label: 'Twitter' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/advantageecosystem/posts/?feedView=all', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://www.instagram.com/advantage.ecosystem/', label: 'Instagram' }
   ];
 
   return (

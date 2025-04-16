@@ -1,18 +1,72 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Search } from 'lucide-react';
+import { Search, X, ArrowRight } from 'lucide-react';
 import { Row, Col } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
   const [searchTerm, setSearchTerm] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [searchResults, setSearchResults] = useState([]);
+  const navigate = useNavigate();
+
+  // Define navigation items with more detailed information
+  const navigationItems = useMemo(() => [
+    {
+      path: '/',
+      title: 'Home',
+      description: 'Return to the main page',
+      keywords: ['home', 'main', 'start', 'landing']
+    },
+    {
+      path: '/About-Us',
+      title: 'About Us',
+      description: 'Learn about our company and mission',
+      keywords: ['about', 'company', 'mission', 'vision', 'team']
+    },
+    {
+      path: '/Products-Tools',
+      title: 'Products & Tools',
+      description: 'Explore our product offerings and tools',
+      keywords: ['products', 'tools', 'solutions', 'services', 'offerings']
+    },
+    {
+      path: '/WhyAdveco',
+      title: 'Why AdVeco',
+      description: 'Discover what makes us unique',
+      keywords: ['advantages', 'benefits', 'unique', 'features']
+    },
+    {
+      path: '/Community-Space',
+      title: 'Community Space',
+      description: 'Join our community and events',
+      keywords: ['community', 'events', 'forum', 'discussions']
+    },
+    {
+      path: '/Resources',
+      title: 'Resources',
+      description: 'Access guides, documentation and support',
+      keywords: ['resources', 'guides', 'docs', 'support', 'help']
+    },
+    {
+      path: '/Careers',
+      title: 'Careers',
+      description: 'Explore job opportunities',
+      keywords: ['careers', 'jobs', 'positions', 'employment']
+    },
+    {
+      path: '/Contact-Us',
+      title: 'Contact Us',
+      description: 'Get in touch with our team',
+      keywords: ['contact', 'support', 'help', 'reach']
+    }
+  ], []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,15 +76,59 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Enhanced search function
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+    if (term.length >= 2) {
+      const searchTermLower = term.toLowerCase();
+      const results = navigationItems
+        .filter(item => {
+          const titleMatch = item.title.toLowerCase().includes(searchTermLower);
+          const descMatch = item.description.toLowerCase().includes(searchTermLower);
+          const keywordMatch = item.keywords.some(keyword => 
+            keyword.toLowerCase().includes(searchTermLower)
+          );
+          return titleMatch || descMatch || keywordMatch;
+        })
+        .map(item => ({
+          ...item,
+          matchType: item.title.toLowerCase().includes(searchTermLower) 
+            ? 'title' 
+            : item.description.toLowerCase().includes(searchTermLower)
+              ? 'description'
+              : 'keyword'
+        }))
+        .sort((a, b) => {
+          // Prioritize title matches
+          if (a.matchType === 'title' && b.matchType !== 'title') return -1;
+          if (b.matchType === 'title' && a.matchType !== 'title') return 1;
+          return 0;
+        });
+
+      setSearchResults(results);
+    } else {
+      setSearchResults([]);
+    }
+  };
+
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    console.log('Search term:', searchTerm);
+    if (searchTerm && searchResults.length > 0) {
+      handleResultClick(searchResults[0].path);
+    }
+  };
+
+  const handleResultClick = (path) => {
+    navigate(path);
     setIsSearchFocused(false);
+    setSearchTerm('');
+    setSearchResults([]);
   };
 
   const handleOutsideClick = (e) => {
     if (!e.target.closest('.search-modal') && !e.target.closest('.search-button')) {
       setIsSearchFocused(false);
+      setSearchResults([]);
     }
   };
 
@@ -43,8 +141,10 @@ function Header() {
     return () => document.removeEventListener('click', handleOutsideClick);
   }, [isSearchFocused]);
 
+  // Rest of your existing return statement remains the same until the search results section
   return (
     <div className={`sticky-top cccc bg-light transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`} style={{ color: "#000000" }}>
+      {/* Your existing header code remains the same */}
       <div className="bg-dar cccc py-3">
         <Container fluid className="px-4">
           <Row className="align-items-center flex-nowrap">
@@ -62,7 +162,6 @@ function Header() {
             <Col xs="auto" className="ms-auto">
               <Form onSubmit={handleSearchSubmit} className="d-flex">
                 <div className="position-relative d-flex">
-                 
                   <Button
                     className="search-button d-flex"
                     aria-label="Search Icon"
@@ -90,7 +189,7 @@ function Header() {
         </Container>
       </div>
 
-      {/* Search Modal */}
+      {/* Enhanced Search Modal */}
       {isSearchFocused && (
         <div
           style={{
@@ -102,99 +201,127 @@ function Header() {
             backgroundColor: 'rgba(0,0,0,0.4)',
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center',
+            alignItems: 'flex-start',
+            paddingTop: '10vh',
             zIndex: 1000,
-            padding: '20px',
           }}
         >
           <div
             role="dialog"
             className="search-modal"
             style={{
-              willChange: 'transform',
               backgroundColor: 'rgb(255, 255, 255)',
-              color: 'rgb(51, 51, 51)',
-              borderRadius: '16px',
+              borderRadius: '12px',
               width: '100%',
-              maxWidth: '500px',
+              maxWidth: '600px',
               display: 'flex',
               flexDirection: 'column',
               overflow: 'hidden',
               boxShadow: 'rgba(0, 0, 0, 0.2) 0px 20px 40px 0px',
-              maxHeight: 'min(496px, -30px + 100vh)',
+              maxHeight: '70vh',
+              margin: '0 20px',
             }}
           >
-            {/* Search Modal Content - Keeping existing code */}
             <div
               role="search"
               style={{
-                display: 'inline-flex',
+                display: 'flex',
                 alignItems: 'center',
-                flexShrink: 0,
-                fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont',
-                padding: '12px 20px',
-                gap: '12px',
-                touchAction: 'none',
+                padding: '16px 20px',
                 borderBottom: '1px solid rgba(0,0,0,0.1)',
+                backgroundColor: '#f8f9fa',
               }}
             >
-              <div style={{ flexShrink: 0, display: 'flex' }}>
-                <Search size={18} color="rgba(0, 0, 0, 0.45)" />
-              </div>
+              <Search size={20} color="rgba(0, 0, 0, 0.6)" />
               <input
+                autoFocus
                 spellCheck="false"
-                placeholder="Search..."
+                placeholder="Search pages..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e) => handleSearch(e.target.value)}
                 style={{
                   outline: 'none',
                   border: 'none',
                   background: 'transparent',
-                  fontWeight: 500,
-                  height: '2em',
-                  padding: '0px',
-                  width: '100%',
-                  color: 'rgb(51, 51, 51)',
-                  lineHeight: '2em',
                   fontSize: '16px',
-                  fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont',
+                  padding: '0 12px',
+                  width: '100%',
+                  height: '24px',
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    handleSearchSubmit(e);
+                  }
                 }}
               />
               <button
-                onClick={() => setIsSearchFocused(false)}
+                onClick={() => {
+                  setIsSearchFocused(false);
+                  setSearchTerm('');
+                  setSearchResults([]);
+                }}
                 style={{
                   background: 'none',
                   border: 'none',
                   cursor: 'pointer',
-                  fontSize: '24px',
-                  color: 'rgba(0,0,0,0.45)',
+                  padding: '4px',
                 }}
               >
-                {/* Close icon or button text */}
+                <X size={20} color="rgba(0, 0, 0, 0.6)" />
               </button>
             </div>
+            
             <div
               style={{
-                width: 'calc(100% + 20px)',
-                overflowY: 'scroll',
-                overscrollBehavior: 'contain',
-                marginTop: '-1px',
-                touchAction: 'none',
+                overflowY: 'auto',
+                maxHeight: 'calc(70vh - 57px)',
               }}
             >
-              <ul
-                aria-live="polite"
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  width: 'calc(100% - 20px)',
-                  padding: '0px',
-                  gap: '1px',
-                  margin: '0px',
-                }}
-              >
-                {/* Add dynamic search suggestions here */}
-              </ul>
+              {searchResults.length > 0 ? (
+                <ul
+                  style={{
+                    listStyle: 'none',
+                    margin: 0,
+                    padding: 0,
+                  }}
+                >
+                  {searchResults.map((result, index) => (
+                    <li
+                      key={index}
+                      onClick={() => handleResultClick(result.path)}
+                      style={{
+                        padding: '16px 20px',
+                        borderBottom: '1px solid rgba(0,0,0,0.06)',
+                        cursor: 'pointer',
+                        transition: 'background-color 0.2s',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = 'rgba(0,0,0,0.02)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                      }}
+                    >
+                      <div>
+                        <div style={{ fontWeight: 500, marginBottom: '4px' }}>
+                          {result.title}
+                        </div>
+                        <div style={{ fontSize: '14px', color: 'rgba(0,0,0,0.6)' }}>
+                          {result.description}
+                        </div>
+                      </div>
+                      <ArrowRight size={16} color="rgba(0,0,0,0.4)" />
+                    </li>
+                  ))}
+                </ul>
+              ) : searchTerm.length >= 2 ? (
+                <div style={{ padding: '20px', textAlign: 'center', color: 'rgba(0,0,0,0.6)' }}>
+                  No results found
+                </div>
+              ) : null}
             </div>
           </div>
         </div>
@@ -205,13 +332,16 @@ function Header() {
           <Navbar.Toggle aria-controls="navbarScroll" className="border-0 px-0 ms-n2 " />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="me-auto my-2 my-lg-0">
-              {['/','/About-Us', '/Products-Tools', '/WhyAdveco', '/Community-Space', '/Resources',  '/Careers', '/Contact-Us'].map(
-                (path, index) => (
-                  <Nav.Link key={index} as={NavLink} to={path} className="nav-link-custom">
-                    {path.replace('/', '') || 'Home'}
-                  </Nav.Link>
-                )
-              )}
+              {navigationItems.map((item, index) => (
+                <Nav.Link 
+                  key={index} 
+                  as={NavLink} 
+                  to={item.path} 
+                  className="nav-link-custom"
+                >
+                  {item.path === '/' ? 'Home' : item.title}
+                </Nav.Link>
+              ))}
             </Nav>
           </Navbar.Collapse>
         </Container>
