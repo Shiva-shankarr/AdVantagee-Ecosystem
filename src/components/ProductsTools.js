@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { 
-  FaUsers, FaUsersCog, FaRocket, FaRegUser, FaComments, FaFreeCodeCamp, 
-  FaPencilAlt, FaRegHandshake, FaTasks, FaPen, FaSearch, FaTrophy, FaGamepad, 
-  FaBusinessTime, FaBriefcase 
-} from "react-icons/fa";
+// import { 
+//   FaUsers, FaUsersCog, FaRocket, FaRegUser, FaComments, FaFreeCodeCamp, 
+//   FaPencilAlt, FaRegHandshake, FaTasks, FaPen, FaSearch, FaTrophy, FaGamepad, 
+//   FaBusinessTime, FaBriefcase 
+// } from "react-icons/fa";
 import './ProductsTools.css';
 
 

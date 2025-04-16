@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
-import { Card, Button } from 'react-bootstrap';
+// import { Card, Button } from 'react-bootstrap';
 import { useInView } from 'react-intersection-observer';
 import './Home.css'; // Import CSS for styling
 
@@ -173,8 +173,8 @@ const Home = () => {
             <h2 className="advantage-heading">AdVantage by Adveco today.</h2>
           </div>
           <div className="advantage-buttons">
-            <a href="#" className="advantage-btn learn-more">Learn More</a>
-            <a href="#" className="advantage-btn begin-quest">Begin a Quest</a>
+            <a href="/" name="Learn More" className="advantage-btn learn-more">Learn More</a>
+            <a href="/" name="Begin a Quest" className="advantage-btn begin-quest">Begin a Quest</a>
           </div>
         </div>
       </section>

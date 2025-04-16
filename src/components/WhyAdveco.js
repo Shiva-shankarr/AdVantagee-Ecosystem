@@ -100,25 +100,25 @@ const WhyAdveco = () => {
 </h1>
 
           <div className="whyadveco-bookmark curiosity mt-2" style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px', transition: 'transform 0.2s' }}>
-            <img src="https://framerusercontent.com/images/wUNWTcJELo79eQ9lb3q3VK8Es.png" alt="Curiosity Image" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '10px' }} />
+            <img src="https://framerusercontent.com/images/wUNWTcJELo79eQ9lb3q3VK8Es.png" alt="Curiosity" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '10px' }} />
             <h3 style={{ fontSize: '18px', fontWeight: 600, color: 'rgb(0, 17, 34)', margin: 0 }}>Curiosity</h3>
             <p style={{ fontSize: '12px', fontWeight: 500, color: 'rgb(102, 102, 102)', margin: 0 }}>Discover the joy of learning through immediate rewards.</p>
           </div>
 
           <div className="whyadveco-bookmark mastery mt-2" style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px', transition: 'transform 0.2s' }}>
-            <img src="https://framerusercontent.com/images/FHKw6PtyVB7V9lbNjqIKXYuy0X4.png" alt="Mastery Image" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '10px' }} />
+            <img src="https://framerusercontent.com/images/FHKw6PtyVB7V9lbNjqIKXYuy0X4.png" alt="Master" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '10px' }} />
             <h3 style={{ fontSize: '18px', fontWeight: 600, color: 'rgb(0, 17, 34)', margin: 0 }}>Mastery</h3>
             <p style={{ fontSize: '12px', fontWeight: 500, color: 'rgb(102, 102, 102)', margin: 0 }}>Progress step by step toward meaningful skills.</p>
           </div>
 
           <div className="whyadveco-bookmark autonomy mt-2" style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px', transition: 'transform 0.2s' }}>
-            <img src="https://framerusercontent.com/images/17TDGrRhSu6NF1FNZ9y5pJH7l0.png" alt="Autonomy Image" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '10px' }} />
+            <img src="https://framerusercontent.com/images/17TDGrRhSu6NF1FNZ9y5pJH7l0.png" alt="Autonomy" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '10px' }} />
             <h3 style={{ fontSize: '18px', fontWeight: 600, color: 'rgb(0, 17, 34)', margin: 0 }}>Autonomy</h3>
             <p style={{ fontSize: '12px', fontWeight: 500, color: 'rgb(102, 102, 102)', margin: 0 }}>Take control of your path and goals.</p>
           </div>
 
           <div className="whyadveco-bookmark purpose mt-2" style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px', transition: 'transform 0.2s' }}>
-            <img src="https://framerusercontent.com/images/PIDLQsKb4BB6ZjNQwHaj0F7Uqw.png" alt="Purpose Image" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '10px' }} />
+            <img src="https://framerusercontent.com/images/PIDLQsKb4BB6ZjNQwHaj0F7Uqw.png" alt="Purpose" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '10px' }} />
             <h3 style={{ fontSize: '18px', fontWeight: 600, color: 'rgb(0, 17, 34)', margin: 0 }}>Purpose</h3>
             <p style={{ fontSize: '12px', fontWeight: 500, color: 'rgb(102, 102, 102)', margin: 0 }}>Find deeper meaning in your achievements.</p>
           </div>

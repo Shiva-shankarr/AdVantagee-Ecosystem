@@ -1,34 +1,34 @@
 import React from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "./Resources.css";
 
 function Resources() {
-  const blogs = [
-    {
-      id: 1,
-      title: "Comprehensive Blog Resource",
-      description: "A detailed guide available for download.",
-      img: "https://img.freepik.com/premium-vector/illustration-vector-graphic-cartoon-character-blogging_516790-1495.jpg?semt=ais_hybrid",
-      link: "https://drive.google.com/file/d/18gUQjF4N6nUxWYxOY7Zgz05zGz3B3Dc1/view",
-    },
-  ];
+  // const blogs = [
+  //   {
+  //     id: 1,
+  //     title: "Comprehensive Blog Resource",
+  //     description: "A detailed guide available for download.",
+  //     img: "https://img.freepik.com/premium-vector/illustration-vector-graphic-cartoon-character-blogging_516790-1495.jpg?semt=ais_hybrid",
+  //     link: "https://drive.google.com/file/d/18gUQjF4N6nUxWYxOY7Zgz05zGz3B3Dc1/view",
+  //   },
+  // ];
 
-  const tutorials = [
-    {
-      id: 1,
-      title: "How to Use the AdVantage Platform",
-      description: "Step-by-step tutorial to get started.",
-      img: "https://img.youtube.com/vi/-tOC9-JCKGY/0.jpg",
-      link: "https://youtu.be/-tOC9-JCKGY?si=O8kU1CzMpsHhSh2r",
-    },
-    {
-      id: 2,
-      title: "Advanced Features Overview",
-      description: "Learn about advanced features and tools.",
-      img: "https://img.youtube.com/vi/4H1x9rKnQTc/0.jpg",
-      link: "https://youtu.be/4H1x9rKnQTc",
-    },
-  ];
+  // const tutorials = [
+  //   {
+  //     id: 1,
+  //     title: "How to Use the AdVantage Platform",
+  //     description: "Step-by-step tutorial to get started.",
+  //     img: "https://img.youtube.com/vi/-tOC9-JCKGY/0.jpg",
+  //     link: "https://youtu.be/-tOC9-JCKGY?si=O8kU1CzMpsHhSh2r",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Advanced Features Overview",
+  //     description: "Learn about advanced features and tools.",
+  //     img: "https://img.youtube.com/vi/4H1x9rKnQTc/0.jpg",
+  //     link: "https://youtu.be/4H1x9rKnQTc",
+  //   },
+  // ];
 
   return (
     <section className="resources-section py-5">
@@ -48,7 +48,7 @@ function Resources() {
         className="resource-link__wrapper"
         href="https://drive.google.com/file/d/18gUQjF4N6nUxWYxOY7Zgz05zGz3B3Dc1/view"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
         <div className="resource-link__image-wrapper">
           <img
